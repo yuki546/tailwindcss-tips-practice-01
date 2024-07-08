@@ -4,8 +4,8 @@ import Tips3 from "./components/Tips3";
 export default function Home() {
   return (
     <main className="py-20 px-20">
-      <Tips1_2 />
-      {/* <Tips3 /> */}
+      {/* <Tips1_2 /> */}
+      <Tips3 />
     </main>
   );
 }
