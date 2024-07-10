@@ -1,10 +1,20 @@
-const Button = () => {
+import { ButtonHTMLAttributes, ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+}
+
+const Button = ({ children, className }: ButtonProps) => {
   return (
-    <div
-      className={`bg-sky-500 inline-block px-6 py-4 rounded-md text-white shadow cursor-pointer font-medium`}
+    <button
+      className={twMerge(
+        `bg-sky-500 inline-block px-6 py-4 rounded-md text-white shadow cursor-pointer font-medium`,
+        className
+      )}
     >
-      Button
-    </div>
+      {children}
+    </button>
   );
 };
 
